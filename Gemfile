@@ -8,3 +8,5 @@ gem 'jekyll-press'
 gem 'kramdown', '~> 1.10.0'
 gem 'jekyll-watch', '~>1.1'
 gem 'sass'
+
+gem 'github-pages'
