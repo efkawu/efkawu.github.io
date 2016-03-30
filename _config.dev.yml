@@ -1,0 +1,133 @@
+# Site wide configuration
+
+title: "efkawu.pl | personal music blog"
+name: "efkawu.pl"
+description: "Personal music blog with playlists published on Spotify and Youtube"
+email:
+logo: # 120x120 px default image used for Twitter summary card
+teaser: # 400x250 px default teaser image used in image archive grid
+locale: en-EN
+encoding: utf-8
+url: http://localhost:4000
+
+# Jekyll configuration
+
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+#lsi: true
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+highlighter: rouge
+gems:
+  - jekyll-sitemap
+  - kramdown
+
+# Plugin: jekyll-assets
+
+assets:
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+  baseurl: http://localhost:4000/assets/
+  debug: false
+  version: 1
+
+# Plugin: jekyll-archives
+jekyll-archives:
+  enabled:
+    - tags
+    - year
+  layouts:
+    year: year_index
+    tag: tag_index
+  permalinks:
+    year: /:year/
+    tag: /tag/:name/
+
+# Plugin: jekyll-press - minifies all html, js, css files
+jekyll-press:
+  exclude: #'atom.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  js_options: {}      # js minifier options
+  css_options: {}     # css minifier options
+  html_options: {}    # html minifier options
+
+
+# Plugin: jekyll-picture-tag
+picture:
+  source: "images/_originals"
+  output: "images"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1]
+      source_720:
+        media: "(min-width: 1200px)"
+        width: "720"
+      source_670:
+        media: "(min-width: 768px)"
+        width: "670"
+      source_540:
+        media: "(min-width: 600px)"
+        width: "540"
+      source_default:
+        width: "320"
+    hero:
+      attr:
+        class: "page__hero-image"
+        itemprop: "image"
+      ppi: [1]
+      source_1600:
+        media: "(min-width: 1600px)"
+        width: "1600"
+      source_1024:
+        media: "(min-width: 1024px)"
+        width: "1024"
+      source_768:
+        media: "(min-width: 768px)"
+        width: "768"
+      source_600:
+        media: "(min-width: 600px)"
+        width: "600"
+      source_default:
+        width: "320"
+
+
+
+# Site owner
+owner:
+  name: Efka Wu
+  email:
+  bio: something about music
+  avatar: #bio-photo.jpg # 160x160 px image for author byline
+  twitter: login
+  facebook: login
+  instagram:
+  disqus-shortname:
+  lastfm: login
+  youtube: code
+  google:
+    ad-client:
+    ad-slot:
+    analytics:
+    plus:
+    verify:
+
+# Collections
+collections:
+  faqs:
+    output: true
+    permalink: /:collection/:path
+    title: FAQs
+  components:
+    output: false
+  color:
+    output: false
+
+#include: [".htaccess"]
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
