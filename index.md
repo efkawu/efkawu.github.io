@@ -1,5 +1,5 @@
 ---
-layout: playlists
+layout: playlists-phantom-style
 excerpt: ""
 tags: [blog, music]
 image:

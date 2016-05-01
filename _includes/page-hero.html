@@ -1,6 +1,6 @@
 {% if page.image.feature %}
-<div class="image-wrap">
-    <img src=
+<div class="page__hero">
+    <img class="page__hero-image" src=
      {% if page.image.feature contains 'http' %}
         "{{ page.image.feature }}"
     {% else %}
@@ -8,7 +8,7 @@
     {% endif %}
     alt="{{ page.title }} feature image">
     {% if page.image.credit %}
-        <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+        <span class="page__hero-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
     {% endif %}
 </div><!-- /.image-wrap -->
 {% endif %}
