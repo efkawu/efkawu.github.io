@@ -9,7 +9,8 @@ logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale: en-EN
 encoding: utf-8
-url: http://efkawu.github.io/
+#url: http://efkawu.pl
+url: http://efkawu.github.io
 
 
 # Jekyll configuration
@@ -112,7 +113,7 @@ owner:
   google:
     ad-client:
     ad-slot:
-    analytics: UA-43051046-1
+    analytics: UA-77205709-1
     plus:
     verify:
 
