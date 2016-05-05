@@ -1,6 +1,17 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 _site
+_asset_bundler_cache
+
 *.iml
 node_modules
 .sass-cache
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+.jekyll-metadata
+
+codekit-config.json
+node_modules
+npm-debug.log*
+.bundle

@@ -1,0 +1,23 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% capture teaser %}{{ site.teaser }}{% endcapture %}
+{% endif %}
+
+<article class="style{{post.image.stylish}}" itemscope itemtype="http://schema.org/CreativeWork">
+  <span class="image">
+    <img src="/images/{{post.image.teaser}}" alt="" />
+  </span>
+  {% if post.link %}
+    <a href="{{ post.link }}" target="_blank">
+  {% else %}
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+      <h2>PL#{{post.playlist.number}} <br />{{ post.playlist.title }}</h2>
+      <div class="content">
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      </div>
+    </a>
+  {% endif %}
+</article>

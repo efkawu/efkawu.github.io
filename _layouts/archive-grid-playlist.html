@@ -1,0 +1,18 @@
+---
+layout: default
+author_profile: true
+---
+
+<div id="main" role="main">
+    {% include sidebar.html %}
+
+    <div class="archive">
+        <h1 class="page__title">{{ page.title }}</h1>
+        {% include base_path %}
+        <section class="tiles">
+            {% for post in site.posts %}
+            {% include archive-single-tile.html %}
+            {% endfor %}
+        </section>
+    </div>
+</div>

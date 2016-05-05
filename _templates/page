@@ -1,10 +1,7 @@
 ---
-layout: {{ layout }}
+layout: single
 title: {{ title }}
 date: {{ date }}
-modified:
-excerpt:
-tags: []
-image:
-  feature:
+permalink: {{ permalink }}
+author_profile: false
 ---

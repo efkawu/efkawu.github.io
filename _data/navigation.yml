@@ -1,9 +1,10 @@
-# Site navigation links
-- title: Home
-  url: /
+# main links links
+main:
+  - title: "home"
+    url: /
 
-- title: Playlists by year
-  url: /playlists/
+  - title: "by year"
+    url: /year-archive/
 
-
-
+  #- title: "by tag"
+  #  url: /tags-archive/
